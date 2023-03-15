@@ -21,12 +21,14 @@ def random_predict(number: int = 1) -> int:
     while True:
         count += 1
         predict_number = round(((min_var + max_var) / 2))  # предполагаемое число
+        
         if number > predict_number:
-            min_var = round(((min_var + max_var) / 2))
+            min_var = round(((min_var + max_var) / 2))  # уменьшаем диапазон поиска
         elif number < predict_number:
-            max_var = round(((min_var + max_var) / 2))
+            max_var = round(((min_var + max_var) / 2))  # уменьшаем диапазон поиска
         elif number == predict_number:
             break  # выход из цикла если угадали
+        
     return count
 
 
