@@ -25,7 +25,7 @@ def random_predict(number: int = 1) -> int:
         if number > predict_number:
             min_var = round(((min_var + max_var) / 2))  # уменьшаем диапазон поиска, поднимая нижнюю границу
         elif number < predict_number:
-            max_var = round(((min_var + max_var) / 2))  # уменьшаем диапазон поиска, поднимая верхнюю границу
+            max_var = round(((min_var + max_var) / 2))  # уменьшаем диапазон поиска, опуская верхнюю границу
         elif number == predict_number:
             break  # выход из цикла если угадали
         
