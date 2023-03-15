@@ -23,9 +23,9 @@ def random_predict(number: int = 1) -> int:
         predict_number = round(((min_var + max_var) / 2))  # предполагаемое число
         
         if number > predict_number:
-            min_var = round(((min_var + max_var) / 2))  # уменьшаем диапазон поиска
+            min_var = round(((min_var + max_var) / 2))  # уменьшаем диапазон поиска, поднимая нижнюю границу
         elif number < predict_number:
-            max_var = round(((min_var + max_var) / 2))  # уменьшаем диапазон поиска
+            max_var = round(((min_var + max_var) / 2))  # уменьшаем диапазон поиска, поднимая верхнюю границу
         elif number == predict_number:
             break  # выход из цикла если угадали
         
